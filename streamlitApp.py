@@ -70,8 +70,8 @@ def main():
     # Display planet information
     if planet_data:
         st.subheader(f"Planet Information for {selected_planet_name}")
-        st.write("Climate:", planet_data['climate'])
-        st.write("Diameter:", planet_data['diameter'])
+        st.write("Climate (C):", planet_data['climate'])
+        st.write("Diameter (km):", planet_data['diameter'])
         st.write("Gravity:", planet_data['gravity'])
         st.write("Orbital Period:", planet_data['orbital_period'])
         st.write("Population:", planet_data['population'])
@@ -88,7 +88,7 @@ def main():
                 st.subheader(f"Details for {selected_person_name}")
                 st.write("Birth Year:", person_details['birth_year'])
                 st.write("Gender:", person_details['gender'])
-                st.write("Height:", person_details['height'])
+                st.write("Height (m):", person_details['height'])
                 st.write("Mass:", person_details['mass'])
                 # Add more details as needed
             else:
