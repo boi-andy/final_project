@@ -88,7 +88,7 @@ def main():
                 st.subheader(f"Details for {selected_person_name}")
                 st.write("Birth Year:", person_details['birth_year'])
                 st.write("Gender:", person_details['gender'])
-                st.write("Height (m):", person_details['height'])
+                st.write("Height (cm):", person_details['height'])
                 st.write("Mass:", person_details['mass'])
                 # Add more details as needed
             else:
