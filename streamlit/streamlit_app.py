@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
 
-url = 'https://raw.githubusercontent.com/boi-andy/final_project/main/planets_data.csv'
+url = 'https://raw.githubusercontent.com/boi-andy/final_project/data/main/planets_data.csv'
 planets_df = pd.read_csv(url)
 
 # Streamlit app
@@ -130,7 +130,7 @@ st.pyplot(fig_regplot)
 
 
 # Load data from the provided URL
-url = 'https://raw.githubusercontent.com/boi-andy/final_project/main/people_data.csv'
+url = 'https://raw.githubusercontent.com/boi-andy/final_project/data/main/people_data.csv'
 characters_df = pd.read_csv(url)
 
 # Streamlit app
