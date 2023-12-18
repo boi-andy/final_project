@@ -71,6 +71,17 @@ plt.xticks(rotation=45, ha='right')
 # Display the plot in Streamlit app
 st.pyplot(fig_bar)
 
+# Plot of people
+st.title('Character Details Search')
+
+# Create a dropdown menu for character selection
+selected_character = st.selectbox('Select a Character:', characters_df['name'])
+
+# Display details of the selected character
+if st.button('Show Details'):
+    character_details = characters_df[characters_df['name'] == selected_character]
+    st.write(character_details)
+
 # plot 2
 st.header('Distribution of Planet Diameter')
 
