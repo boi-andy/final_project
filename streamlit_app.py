@@ -1,13 +1,18 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.stats import linregress
 
 url = 'https://raw.githubusercontent.com/boi-andy/final_project/main/planets_data.csv'
 planets_df = pd.read_csv(url)
 
 # Streamlit app
 st.title('Star Wars Planets Data Exploration')
+
+st.text('My analysis and explanation for each of these visuals can be found on my blog post:') 
+st.markdown('[EDA for Star Wars Planets and People](https://boi-andy.github.io/my-blog/2023/11/14/EDA.html)')
+
 
 # Plot 1: Scatter plot with circles for each planet based on diameter
 st.header('Planet Diameter Comparison')
@@ -121,3 +126,67 @@ ax_regplot.legend()
 
 # Display the plot in Streamlit app
 st.pyplot(fig_regplot)
+
+
+
+# Load data from the provided URL
+url = 'https://raw.githubusercontent.com/boi-andy/final_project/main/people_data.csv'
+characters_df = pd.read_csv(url)
+
+# Streamlit app
+st.title('Star Wars Characters Height Box Plot')
+
+# Add input fields for manually typing the height range
+min_height = st.number_input('Enter Minimum Height (cm):', min_value=0, max_value=300, value=0)
+max_height = st.number_input('Enter Maximum Height (cm):', min_value=0, max_value=300, value=300)
+
+# Filter the DataFrame based on the selected height range
+filtered_characters_df = characters_df[(characters_df['Height'] >= min_height) & (characters_df['Height'] <= max_height)]
+
+# Set up the plot
+fig_boxplot, ax_boxplot = plt.subplots(figsize=(10, 6))
+
+# Create a box plot of height by gender
+sns.boxplot(x='Gender', y='Height', data=filtered_characters_df, order=['male', 'female', 'Unidentified'], palette='Set2', ax=ax_boxplot)
+
+# Set title and labels
+ax_boxplot.set_title('Box Plot of Height by Gender in Star Wars Characters')
+ax_boxplot.set_ylabel('Height (cm)')
+
+# Display the plot in Streamlit app
+st.pyplot(fig_boxplot)
+
+# Final Plot
+# Filter numeric columns
+numeric_columns = characters_df.select_dtypes(include=['number']).columns
+
+# Streamlit app
+st.title('Scatter Plot and Regression Analysis')
+
+# Add dropdown menu for selecting variables
+x_variable = st.selectbox('Select X Variable:', numeric_columns)
+y_variable = st.selectbox('Select Y Variable:', numeric_columns)
+
+# Add input field for confidence level
+confidence_level = st.number_input('Enter Confidence Level (%):', min_value=1, max_value=100, value=95)
+
+# Scatter plot
+fig_scatter, ax_scatter = plt.subplots(figsize=(10, 6))
+sns.scatterplot(x=x_variable, y=y_variable, data=characters_df, ax=ax_scatter)
+
+# Linear regression
+slope, intercept, r_value, p_value, std_err = linregress(characters_df[x_variable], characters_df[y_variable])
+
+# Add regression line to the plot
+ax_scatter.plot(characters_df[x_variable], slope * characters_df[x_variable] + intercept, color='red', label=f'Regression Line (R-Squared: {r_value**2:.2f})')
+
+# Set axis labels and title
+ax_scatter.set_xlabel(x_variable)
+ax_scatter.set_ylabel(y_variable)
+ax_scatter.set_title(f'Scatter Plot of {y_variable} vs {x_variable}')
+
+# Add legend
+ax_scatter.legend()
+
+# Display the plot in Streamlit app
+st.pyplot(fig_scatter)
