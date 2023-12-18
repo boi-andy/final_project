@@ -1,0 +1,81 @@
+Name,Birth Year,Gender,Height,Mass,Hair Color,Eye Color,Skin Color
+Luke Skywalker,19BBY,male,172.0,77.0,blond,blue,fair
+C-3PO,112BBY,Unidentified,167.0,75.0,n/a,yellow,gold
+R2-D2,33BBY,Unidentified,96.0,32.0,n/a,red,"white, blue"
+Darth Vader,41.9BBY,male,202.0,136.0,none,yellow,white
+Leia Organa,19BBY,female,150.0,49.0,brown,brown,light
+Owen Lars,52BBY,male,178.0,120.0,"brown, grey",blue,light
+Beru Whitesun lars,47BBY,female,165.0,75.0,brown,blue,light
+R5-D4,unknown,Unidentified,97.0,32.0,n/a,red,"white, red"
+Biggs Darklighter,24BBY,male,183.0,84.0,black,brown,light
+Obi-Wan Kenobi,57BBY,male,182.0,77.0,"auburn, white",blue-gray,fair
+Anakin Skywalker,41.9BBY,male,188.0,84.0,blond,blue,fair
+Wilhuff Tarkin,64BBY,male,180.0,,"auburn, grey",blue,fair
+Chewbacca,200BBY,male,228.0,112.0,brown,blue,unknown
+Han Solo,29BBY,male,180.0,80.0,brown,brown,fair
+Greedo,44BBY,male,173.0,74.0,n/a,black,green
+Jabba Desilijic Tiure,600BBY,hermaphrodite,175.0,,n/a,orange,"green-tan, brown"
+Wedge Antilles,21BBY,male,170.0,77.0,brown,hazel,fair
+Jek Tono Porkins,unknown,male,180.0,110.0,brown,blue,fair
+Yoda,896BBY,male,66.0,17.0,white,brown,green
+Palpatine,82BBY,male,170.0,75.0,grey,yellow,pale
+Boba Fett,31.5BBY,male,183.0,78.2,black,brown,fair
+Bossk,53BBY,male,190.0,113.0,none,red,green
+Lando Calrissian,31BBY,male,177.0,79.0,black,brown,dark
+Lobot,37BBY,male,175.0,79.0,none,blue,light
+Ackbar,41BBY,male,180.0,83.0,none,orange,brown mottle
+Mon Mothma,48BBY,female,150.0,,auburn,blue,fair
+Arvel Crynyd,unknown,male,,,brown,brown,fair
+Wicket Systri Warrick,8BBY,male,88.0,20.0,brown,brown,brown
+Nien Nunb,unknown,male,160.0,68.0,none,black,grey
+Qui-Gon Jinn,92BBY,male,193.0,89.0,brown,blue,fair
+Nute Gunray,unknown,male,191.0,90.0,none,red,mottled green
+Finis Valorum,91BBY,male,170.0,,blond,blue,fair
+Padmé Amidala,46BBY,female,185.0,45.0,brown,brown,light
+Jar Jar Binks,52BBY,male,196.0,66.0,none,orange,orange
+Roos Tarpals,unknown,male,224.0,82.0,none,orange,grey
+Rugor Nass,unknown,male,206.0,,none,orange,green
+Ric Olié,unknown,male,183.0,,brown,blue,fair
+Watto,unknown,male,137.0,,black,yellow,"blue, grey"
+Sebulba,unknown,male,112.0,40.0,none,orange,"grey, red"
+Quarsh Panaka,62BBY,male,183.0,,black,brown,dark
+Shmi Skywalker,72BBY,female,163.0,,black,brown,fair
+Darth Maul,54BBY,male,175.0,80.0,none,yellow,red
+Bib Fortuna,unknown,male,180.0,,none,pink,pale
+Ayla Secura,48BBY,female,178.0,55.0,none,hazel,blue
+Ratts Tyerel,unknown,male,79.0,15.0,none,unknown,"grey, blue"
+Dud Bolt,unknown,male,94.0,45.0,none,yellow,"blue, grey"
+Gasgano,unknown,male,122.0,,none,black,"white, blue"
+Ben Quadinaros,unknown,male,163.0,65.0,none,orange,"grey, green, yellow"
+Mace Windu,72BBY,male,188.0,84.0,none,brown,dark
+Ki-Adi-Mundi,92BBY,male,198.0,82.0,white,yellow,pale
+Kit Fisto,unknown,male,196.0,87.0,none,black,green
+Eeth Koth,unknown,male,171.0,,black,brown,brown
+Adi Gallia,unknown,female,184.0,50.0,none,blue,dark
+Saesee Tiin,unknown,male,188.0,,none,orange,pale
+Yarael Poof,unknown,male,264.0,,none,yellow,white
+Plo Koon,22BBY,male,188.0,80.0,none,black,orange
+Mas Amedda,unknown,male,196.0,,none,blue,blue
+Gregar Typho,unknown,male,185.0,85.0,black,brown,dark
+Cordé,unknown,female,157.0,,brown,brown,light
+Cliegg Lars,82BBY,male,183.0,,brown,blue,fair
+Poggle the Lesser,unknown,male,183.0,80.0,none,yellow,green
+Luminara Unduli,58BBY,female,170.0,56.2,black,blue,yellow
+Barriss Offee,40BBY,female,166.0,50.0,black,blue,yellow
+Dormé,unknown,female,165.0,,brown,brown,light
+Dooku,102BBY,male,193.0,80.0,white,brown,fair
+Bail Prestor Organa,67BBY,male,191.0,,black,brown,tan
+Jango Fett,66BBY,male,183.0,79.0,black,brown,tan
+Zam Wesell,unknown,female,168.0,55.0,blonde,yellow,"fair, green, yellow"
+Dexter Jettster,unknown,male,198.0,102.0,none,yellow,brown
+Lama Su,unknown,male,229.0,88.0,none,black,grey
+Taun We,unknown,female,213.0,,none,black,grey
+Jocasta Nu,unknown,female,167.0,,white,blue,fair
+R4-P17,unknown,female,96.0,,none,"red, blue","silver, red"
+Wat Tambor,unknown,male,193.0,48.0,none,unknown,"green, grey"
+San Hill,unknown,male,191.0,,none,gold,grey
+Shaak Ti,unknown,female,178.0,57.0,none,black,"red, blue, white"
+Grievous,unknown,male,216.0,159.0,none,"green, yellow","brown, white"
+Tarfful,unknown,male,234.0,136.0,brown,blue,brown
+Raymus Antilles,unknown,male,188.0,79.0,brown,brown,light
+Sly Moore,unknown,female,178.0,48.0,none,white,pale

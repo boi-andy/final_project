@@ -12,21 +12,22 @@ st.title('Star Wars Planets Data Exploration')
 # Plot 1: Scatter plot with circles for each planet based on diameter
 st.header('Planet Diameter Comparison')
 
-# Add a dropdown menu for selecting a specific planet
-selected_planet_scatter = st.selectbox('Select a Planet:', planets_df['name'])
+# Add a slider for selecting the minimum diameter size
+min_diameter_size = st.slider('Select Minimum Diameter Size (km):', min_value=0, max_value=30000, value=5000)
 
 # Set up the plot
-fig_scatter, ax_scatter = plt.subplots(figsize=(12, 8))
+fig_scatter, ax_scatter = plt.subplots(figsize=(10, 6))
 
 # Plot circles for each planet based on diameter
 for index, planet in planets_df.iterrows():
-    ax_scatter.scatter(
-        x=index,
-        y=planet['diameter'],
-        s=planet['diameter'] / 20,
-        alpha=0.5,
-        label=planet['name']
-    )
+    if planet['diameter'] >= min_diameter_size:
+        ax_scatter.scatter(
+            x=index,
+            y=planet['diameter'],
+            s=planet['diameter'] / 20,
+            alpha=0.5,
+            label=planet['name']
+        )
 
 # Set axis labels and title
 ax_scatter.set_title('Planet Diameter Comparison')
@@ -43,17 +44,45 @@ ax_scatter.set_ylim(0, planets_df['diameter'].max() + 15000)
 # Display the plot in Streamlit app
 st.pyplot(fig_scatter)
 
-# Plot 2: Distribution of planet diameter
+# Plot 1.5: Bar chart for each planet based on diameter
+
+# Filter the DataFrame based on the selected minimum diameter size
+filtered_planets_df = planets_df[planets_df['diameter'] >= min_diameter_size]
+
+# Set up the plot
+fig_bar, ax_bar = plt.subplots(figsize=(10, 6))
+
+# Plot a bar chart for each planet based on diameter
+ax_bar.bar(filtered_planets_df['name'], filtered_planets_df['diameter'])
+
+# Set axis labels and title
+ax_bar.set_title('Planet Diameter Comparison')
+ax_bar.set_xlabel('Planet Name')
+ax_bar.set_ylabel('Diameter (km)')
+
+# Rotate x-axis labels for better readability
+plt.xticks(rotation=45, ha='right')
+
+# Display the plot in Streamlit app
+st.pyplot(fig_bar)
+
+# plot 2
 st.header('Distribution of Planet Diameter')
 
-# Add a slider for selecting the number of bins
-num_bins = st.slider('Select the Number of Bins:', min_value=5, max_value=50, value=30)
+# Add an input field for manually typing the number of bins
+num_bins = st.number_input('Enter the Number of Bins:', min_value=5, max_value=50, value=30)
+
+# Add a slider for selecting the maximum diameter
+max_diameter = st.slider('Select Maximum Diameter (km):', min_value=0, max_value=30000, value=20000)
+
+# Filter the DataFrame based on the selected maximum diameter
+filtered_planets_df = planets_df[planets_df['diameter'] <= max_diameter]
 
 # Set up the plot
 fig_hist, ax_hist = plt.subplots(figsize=(10, 6))
 
 # Visualize the distribution of diameter
-sns.histplot(planets_df['diameter'].dropna(), bins=num_bins, kde=True, ax=ax_hist)
+sns.histplot(filtered_planets_df['diameter'].dropna(), bins=num_bins, kde=True, ax=ax_hist)
 
 # Set axis labels and title
 ax_hist.set_title('Distribution of Planet Diameter')
