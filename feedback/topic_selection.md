@@ -1,0 +1,1 @@
+I originally selected movie data for my project. I got my data from kaggle from an already made dataset. After re

@@ -201,6 +201,80 @@ plt.show()
 
 
 # %%
-planets_df
+import requests
+import pandas as pd
+
+# Function to fetch data for a specific person
+def get_person_data(person_id):
+    api_url = f'https://swapi.dev/api/people/{person_id}/'
+    response = requests.get(api_url)
+    
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f"Failed to retrieve data for person {person_id}. Status code: {response.status_code}")
+        return None
+
+# Get the total number of characters
+initial_response = requests.get('https://swapi.dev/api/people/')
+total_characters = initial_response.json()['count']
+
+# Create an empty DataFrame to store the data
+columns = ['Name', 'Birth Year', 'Gender', 'Height', 'Mass', 'Hair Color', 'Eye Color', 'Skin Color']
+characters_df = pd.DataFrame(columns=columns)
+
+# Fetch and append data for each person
+for person_id in range(1, total_characters + 1):
+    person_data = get_person_data(person_id)
+    
+    if person_data:
+        # Append a new row to the DataFrame
+        characters_df = characters_df.append({
+            'Name': person_data['name'],
+            'Birth Year': person_data['birth_year'],
+            'Gender': person_data['gender'],
+            'Height': person_data['height'],
+            'Mass': person_data['mass'],
+            'Hair Color': person_data['hair_color'],
+            'Eye Color': person_data['eye_color'],
+            'Skin Color': person_data['skin_color'],
+        }, ignore_index=True)
+
+
+
+# %%
+# Display the resulting DataFrame
+characters_df
+
+# %%
+characters_df['Height'] = pd.to_numeric(characters_df['Height'], errors='coerce')
+characters_df['Mass'] = pd.to_numeric(characters_df['Mass'], errors='coerce')
+
+characters_df = characters_df[characters_df['Gender'] != 'none']
+#characters_df = characters_df[characters_df['Gender'] != 'hermaphrodite']
+characters_df['Gender'] = characters_df['Gender'].replace('n/a', 'Unidentified')
+
+
+# %%
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='Gender', y='Height', data=characters_df, order=['male', 'female', 'Unidentified'], palette='Set2')
+plt.title('Box Plot of Height by Gender in Star Wars Characters')
+plt.ylabel('Height (cm)')
+plt.show()
+
+# %%
+# Create a scatterplot with regression line and analysis
+plt.figure(figsize=(10, 6))
+sns.regplot(x='Height', y='Mass', data=characters_df, scatter_kws={'alpha':0.5}, line_kws={'color':'red'}, label='Regression Line')
+plt.title('Scatterplot of Height vs Mass in Star Wars Characters')
+plt.xlabel('Height (cm)')
+plt.ylabel('Mass (kg)')
+
+plt.plot([], [], color='red', label=f'Regression Line (Corr: {characters_df["Height"].corr(characters_df["Mass"]):.2f})')
+
+# Add legend
+plt.legend()
+
+plt.show()
 
 
