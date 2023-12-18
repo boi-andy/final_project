@@ -13,6 +13,8 @@ st.title('Star Wars Planets Data Exploration')
 st.text('My analysis and explanation for each of these visuals can be found on my blog post:') 
 st.markdown('[EDA for Star Wars Planets and People](https://boi-andy.github.io/my-blog/2023/11/14/EDA.html)')
 
+st.text('To find the data I used for this application, visit my Github repository:') 
+st.markdown('[Star Wars Final Respository](https://github.com/boi-andy/final_project)')
 
 # Plot 1: Scatter plot with circles for each planet based on diameter
 st.header('Planet Diameter Comparison')
