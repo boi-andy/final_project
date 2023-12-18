@@ -194,10 +194,13 @@ st.pyplot(fig_scatter)
 # Plot of people
 st.title('Character Details Search')
 
+st.text('If you want to play around and see the details of each character, use the following tools:') 
+
+
 # Create a dropdown menu for character selection
-selected_character = st.selectbox('Select a Character:', characters_df['name'])
+selected_character = st.selectbox('Select a Character:', characters_df['Name'])
 
 # Display details of the selected character
 if st.button('Show Details'):
-    character_details = characters_df[characters_df['name'] == selected_character]
+    character_details = characters_df[characters_df['Name'] == selected_character]
     st.write(character_details)
