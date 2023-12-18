@@ -20,5 +20,5 @@ I was most interested in the planets of the Star Wars Galaxy. I wanted to know h
 
 The correlation coefficent of the realtionship between the diameter and population of a planet is 0.33 and has a R-squared value of 0.11. This tells us that the relationship between the two variables are quite weak. You can seee that most of the populations are low amongst the averaged sized planets. There are certain planets like Coruscant that has a population of 1 trillion inhabitants but an average diameter of just over 12,000 km. This is insufficent evidence to say that the size of a planet will have an effect on its population.
 
-If you would like to play around with specific details of each planet and see the characters from each planet, visit my [Streamlit app](https://starwarsplanets.streamlit.app/).
+If you would like to play around with specific details of each planet and see the characters from each planet, visit my [Streamlit app](https://boi-andy-final-project-streamlitstreamlit-app-pfbhxb.streamlit.app/).
 
