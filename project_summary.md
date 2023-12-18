@@ -10,7 +10,7 @@ The story of how I came to this project can be found on my blog post [Data Colle
 
 The methods I used can also be found on the same blog post [Data Collection for Star Wars](https://boi-andy.github.io/my-blog/2023/11/10/data-collection.html). <br>
 
-I The original publishers of the Star Wars used to use a website called swampi.co. After their API was abused, they shut down thee website and created a new one: [swampi.dev](https://swapi.dev/). This has data on all plaents, spaceships, vehicles, people, films, and species in each of the first 7 Star Wars films. 
+The original publishers of the Star Wars used to use a website called swampi.co. After their API was abused, they shut down thee website and created a new one: [swampi.dev](https://swapi.dev/). This has data on all plaents, spaceships, vehicles, people, films, and species in each of the first 7 Star Wars films. 
 
 ## Results
 
