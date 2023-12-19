@@ -1,6 +1,4 @@
-# final_project
-
-For my final project, I will be exploring the different types of planets in the Star Wars galaxy. Part of this research will include the planet's size, teerrain, and population. I will also be using data that show what characters are from each planet and the character's features, including type of species, height, weight, and home world.
+# Star Wars Project
 
 For my final project, I will be exploring the details of the Star Wars galaxy. I am most interested in the planets and people of the galaxy far, far, away. I will start by gathering and cleaning data from a Star Wars API. I will then create visuals, run analysis, and form conclusions from the data collected. 
 
